@@ -1,0 +1,66 @@
+---
+import DefaultBody from '../layouts/DefaultBody.astro';
+import Navbar from '../components/Navbar.astro';
+import CardLayout from '../components/cards/CardLayout.astro';
+import Card from '../components/cards/Card.astro';
+import Footer from '../components/Footer.astro';
+import BackToTop from '../components/BackToTop.astro';
+import ColorChanger from '../components/ColorChanger.astro';
+---
+
+<DefaultBody title="Carbon Currency's Releases" description="See how much the rap duo Carbon Currency has released" keywords="Carbon Currency, hip-hop, rap duo, music, fresh beats, lyrical fire, underground rap, new album, preston clavesilla, millibands, miles" author="Black Carbon & Millibands">
+
+<div id="page">
+	<Navbar />
+	<div id="main-content">
+	  <main id="releases" class="container">
+      <div class="text-center p-3">
+        <h1 class="display-4 fw-bold">Releases</h1>
+        <p class="lead">See how much the rap duo Carbon Currency has released over time.</p>
+        <CardLayout>
+          <Fragment slot="card-content">
+            <Card 
+              cardContent={[
+                {
+                  title: "FAM OVER EVERYTHING",
+                  type: "EP",
+                  comingsoon: [
+                    { date: "2025" },
+                  ],
+                  image: [
+                    { src: "FAMOVEREVERYTHING.webp", alt: "Album Cover" },
+                  ],
+                }
+              ]}
+            />
+            <Card 
+              cardContent={[
+                {
+                  title: "GOLD HEARTZ NEVA RUST",
+                  date: "April 2025",
+                  type: "EP",
+                  icons: [
+                    { icon: "ci ci-ytmusic", text: "YouTube Music", href: "https://music.youtube.com/playlist?list=OLAK5uy_kd2YNtuHfKRfpXRlpkwn1kuvfMHWcT7ZA" },
+                    { icon: "bi bi-spotify", text: "Spotify", href: "https://open.spotify.com/album/5nrXPtZ6yltHZzCfiklOtB" },
+                    { icon: "bi bi-apple", text: "Apple Music", href: "https://music.apple.com/us/album/gold-heartz-neva-rust-ep/1808224765" },
+                    { icon: "ci ci-soundcloud", text: "SoundCloud", href: "https://soundcloud.com/user-705361503/sets/gold-heartz-neva-rust" },
+                    { icon: "ci ci-bandlab", text: "BandLab", href: "https://www.bandlab.com/black__carbon/albums/7f308740-2613-f011-aaa7-000d3a930a05" },
+                  ],
+                  image: [
+                    { src: "GOLD.webp", alt: "Album Cover" },
+                  ],
+                }
+              ]}
+            />
+          </Fragment>
+        </CardLayout>
+      </div>
+		</main>
+		<Footer />
+	</div>
+  <div id="fixelements">
+    <ColorChanger />
+    <BackToTop />
+  </div>
+</div>
+</DefaultBody>

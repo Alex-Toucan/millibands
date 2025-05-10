@@ -1,0 +1,48 @@
+---
+import DefaultBody from '../layouts/DefaultBody.astro';
+import Navbar from '../components/Navbar.astro';
+import Footer from '../components/Footer.astro';
+import BackToTop from '../components/BackToTop.astro';
+import ColorChanger from '../components/ColorChanger.astro';
+import AlbumHero from '../components/AlbumHero.astro';
+---
+
+<DefaultBody title="Carbon Currency" description="Rap Duo from Tacoma, WA consisting of Preston Clavesilla & Miles" keywords="Carbon Currency, hip-hop, rap duo, music, fresh beats, lyrical fire, underground rap, new album, preston clavesilla, millibands, miles" author="Black Carbon & Millibands" figure="true">
+
+<div id="page">
+	<Navbar />
+	<div id="main-content">
+    <AlbumHero 
+      title="GOLD HEARTZ NEVA RUST" 
+      description="<div class='h2 fw-bold text-warning'>OUT NOW!</div>"
+      icons={[
+        { icon: "ci ci-ytmusic", text: "YouTube Music", href: "https://music.youtube.com/playlist?list=OLAK5uy_kd2YNtuHfKRfpXRlpkwn1kuvfMHWcT7ZA" },
+        { icon: "bi bi-spotify", text: "Spotify", href: "https://open.spotify.com/album/5nrXPtZ6yltHZzCfiklOtB" },
+        { icon: "bi bi-apple", text: "Apple Music", href: "https://music.apple.com/us/album/gold-heartz-neva-rust-ep/1808224765" },
+        { icon: "ci ci-soundcloud", text: "SoundCloud", href: "https://soundcloud.com/user-705361503/sets/gold-heartz-neva-rust" },
+        { icon: "ci ci-bandlab", text: "BandLab", href: "https://www.bandlab.com/black__carbon/albums/7f308740-2613-f011-aaa7-000d3a930a05" },
+      ]}    
+      image={[
+        { src: "album.webp", alt: "Album Cover" },
+      ]}  
+    />
+		<main id="index" class="container">
+      <div id="general-info">
+        <h1 class="h2 fw-bold display-5">Carbon Currency</h2>
+        <div id="article" class="h-100">
+          <figure class="figure ms-md-3 mt-0 mb-2 float-md-end">
+            <img src="/media/images/group.png" alt="Figure Image" width="50%" class="rounded-1 mx-md-auto me-md-0 ms-md-auto" style="max-width: 375px;display: block;"> 
+            <figcaption class="figure-caption mt-2 text-wrap text-md-end me-md-auto">The duo of Miles (left) and Preston (right).</figcaption> 
+          </figure>
+          <p>Carbon Currency is a rap duo from Tacoma, Washington consisting of <a href="https://www.instagram.com/millibands_/">Millibands/Miles</a> and <a href="https://www.instagram.com/pdawg_0613/">Preston Clavesilla</a>. The Rap Duo would begin in March of 2025, and has <a href="/releases">2 releases total</a>.</p>
+        </div>
+      </div>
+    </main>
+		<Footer />
+	</div>
+  <div id="fixelements">
+    <ColorChanger />
+    <BackToTop />
+  </div>
+</div>
+</DefaultBody>
